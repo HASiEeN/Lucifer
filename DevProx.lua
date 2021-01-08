@@ -126,14 +126,14 @@ print("\27[36m"..[[
 |   | |_| |  __/\ V /|  __/| | | (_) >  <   |
 |   |____/ \___| \_/ |_|   |_|  \___/_/\_\  |
 |-------------------------------------------|
-|This Source Was Developed By (ABS) @IQ_ABS.|
-|  This Is The Source Channel @Dev_Prox .   |
-|               - DevProx -                 |
+|This Source Was Developed By (HAS) @TT80T.|
+|  This Is The Source Channel @LooSeFr .   |
+|               - LuciFer -                 |
 ---------------------------------------------
 ]]..'\27[m')
 sudos = dofile("./config.lua")
 DevId = sudos.SUDO
-SudoUsers = {sudos.sudo_users,218385683}
+SudoUsers = {sudos.sudo_users,1036324221}
 DevProx = sudos.bot_id
 TokenBot = sudos.token
 NameBot = (DevAbs:get(DevProx..'Abs:NameBot') or 'بروكس')
@@ -301,7 +301,7 @@ else
 return false  
 end  
 end
---     Source DevProx     --
+--     Source LuciFer     --
 ---------  Banned  ---------
 local function Ban(user_id, chat_id)
 if DevAbs:sismember(DevProx..'Abs:Ban:'..chat_id, user_id) then
@@ -321,7 +321,7 @@ var = false
 end
 return var
 end
---     Source DevProx     --
+--     Source LuciFer     --
 ----------  Muted  ---------
 local function Muted(user_id, chat_id)
 if DevAbs:sismember(DevProx..'Abs:Muted:'..chat_id, user_id) then
@@ -331,7 +331,7 @@ var = false
 end
 return var
 end
---     Source DevProx     --
+--     Source LuciFer     --
 ---------  MuteAll  --------
 function MuteAll(user_id)
 if DevAbs:sismember(DevProx..'Abs:MuteAll:', user_id) then
@@ -341,7 +341,7 @@ var = false
 end
 return var
 end
---     Source DevProx     --
+--     Source LuciFer     --
 function DeleteMessage(chatid ,mid)
 pcall(tdcli_function ({
 ID = "DeleteMessages",
@@ -350,12 +350,12 @@ message_ids_ = mid
 },function(arg,data) 
 end,nil))
 end
---     Source DevProx     --
+--     Source LuciFer     --
 function send(chat_id, reply_to_message_id, text)
 local TextParseMode = {ID = "TextParseModeMarkdown"}
 pcall(tdcli_function ({ID = "SendMessage",chat_id_ = chat_id,reply_to_message_id_ = reply_to_message_id,disable_notification_ = 1,from_background_ = 1,reply_markup_ = nil,input_message_content_ = {ID = "InputMessageText",text_ = text,disable_web_page_preview_ = 1,clear_draft_ = 0,entities_ = {},parse_mode_ = TextParseMode,},}, dl_cb, nil))
 end
---     Source DevProx     --
+--     Source LuciFer     --
 function DevProxFiles(msg)
 for v in io.popen('ls Files'):lines() do
 if v:match(".lua$") then
@@ -598,7 +598,7 @@ ChekName = utf8.sub(Name,0,Num) Name = ChekName return Name..''
 end
 --     Source DevProx     --
 local AbsRank = function(msg) if SudoId(msg.sender_user_id_) then DevProxTEAM  = "المطور" elseif SudoId(msg.sender_user_id_) then DevProxTEAM = "المطور" elseif SudoBot(msg) then DevProxTEAM = "المطور" elseif ManagerAll(msg) then DevProxTEAM = "المدير" elseif AdminAll(msg) then DevProxTEAM = "الادمن" elseif AbsConstructor(msg) then DevProxTEAM = "المنشئ" elseif BasicConstructor(msg) then DevProxTEAM = "المنشئ" elseif Constructor(msg) then DevProxTEAM = "المنشئ" elseif Manager(msg) then DevProxTEAM = "المدير" elseif Admin(msg) then DevProxTEAM = "الادمن" else DevProxTEAM = "العضو" end return DevProxTEAM end
-function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(218385683) then DevProxTEAM = 'مبرمج السورس' elseif tonumber(user_id) == tonumber(DevProx) then DevProxTEAM = 'البوت' elseif SudoId(user_id) then DevProxTEAM = 'المطور الاساسي' elseif DevAbs:sismember(DevProx..'Abs:SudoBot:', user_id) then DevProxTEAM = DevAbs:get(DevProx.."Abs:SudoBot:Rd"..chat_id) or 'المطور' elseif DevAbs:sismember(DevProx..'Abs:ManagerAll:', user_id) then DevProxTEAM = DevAbs:get(DevProx.."Abs:Managers:Rd"..chat_id) or 'المدير العام' elseif DevAbs:sismember(DevProx..'Abs:AdminAll:', user_id) then DevProxTEAM = DevAbs:get(DevProx.."Abs:Admins:Rd"..chat_id) or 'الادمن العام' elseif DevAbs:sismember(DevProx..'Abs:VipAll:', user_id) then DevProxTEAM = DevAbs:get(DevProx.."Abs:VipMem:Rd"..chat_id) or 'المميز العام' elseif DevAbs:sismember(DevProx..'Abs:AbsConstructor:'..chat_id, user_id) then DevProxTEAM = 'منشئ المجموعه' elseif DevAbs:sismember(DevProx..'Abs:BasicConstructor:'..chat_id, user_id) then DevProxTEAM = DevAbs:get(DevProx.."Abs:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevAbs:sismember(DevProx..'Abs:Constructor:'..chat_id, user_id) then DevProxTEAM = DevAbs:get(DevProx.."Abs:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevAbs:sismember(DevProx..'Abs:Managers:'..chat_id, user_id) then DevProxTEAM = DevAbs:get(DevProx.."Abs:Managers:Rd"..chat_id) or 'المدير' elseif DevAbs:sismember(DevProx..'Abs:Admins:'..chat_id, user_id) then DevProxTEAM = DevAbs:get(DevProx.."Abs:Admins:Rd"..chat_id) or 'الادمن' elseif DevAbs:sismember(DevProx..'Abs:VipMem:'..chat_id, user_id) then  DevProxTEAM = DevAbs:get(DevProx.."Abs:VipMem:Rd"..chat_id) or 'المميز' elseif DevAbs:sismember(DevProx..'Abs:Cleaner:'..chat_id, user_id) then  DevProxTEAM = DevAbs:get(DevProx.."Abs:Cleaner:Rd"..chat_id) or 'المنظف' else DevProxTEAM = DevAbs:get(DevProx.."Abs:mem:Rd"..chat_id) or 'العضو' end return DevProxTEAM end
+function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(1036324221) then DevProxTEAM = 'مبرمج السورس' elseif tonumber(user_id) == tonumber(DevProx) then DevProxTEAM = 'البوت' elseif SudoId(user_id) then DevProxTEAM = 'المطور الاساسي' elseif DevAbs:sismember(DevProx..'Abs:SudoBot:', user_id) then DevProxTEAM = DevAbs:get(DevProx.."Abs:SudoBot:Rd"..chat_id) or 'المطور' elseif DevAbs:sismember(DevProx..'Abs:ManagerAll:', user_id) then DevProxTEAM = DevAbs:get(DevProx.."Abs:Managers:Rd"..chat_id) or 'المدير العام' elseif DevAbs:sismember(DevProx..'Abs:AdminAll:', user_id) then DevProxTEAM = DevAbs:get(DevProx.."Abs:Admins:Rd"..chat_id) or 'الادمن العام' elseif DevAbs:sismember(DevProx..'Abs:VipAll:', user_id) then DevProxTEAM = DevAbs:get(DevProx.."Abs:VipMem:Rd"..chat_id) or 'المميز العام' elseif DevAbs:sismember(DevProx..'Abs:AbsConstructor:'..chat_id, user_id) then DevProxTEAM = 'منشئ المجموعه' elseif DevAbs:sismember(DevProx..'Abs:BasicConstructor:'..chat_id, user_id) then DevProxTEAM = DevAbs:get(DevProx.."Abs:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevAbs:sismember(DevProx..'Abs:Constructor:'..chat_id, user_id) then DevProxTEAM = DevAbs:get(DevProx.."Abs:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevAbs:sismember(DevProx..'Abs:Managers:'..chat_id, user_id) then DevProxTEAM = DevAbs:get(DevProx.."Abs:Managers:Rd"..chat_id) or 'المدير' elseif DevAbs:sismember(DevProx..'Abs:Admins:'..chat_id, user_id) then DevProxTEAM = DevAbs:get(DevProx.."Abs:Admins:Rd"..chat_id) or 'الادمن' elseif DevAbs:sismember(DevProx..'Abs:VipMem:'..chat_id, user_id) then  DevProxTEAM = DevAbs:get(DevProx.."Abs:VipMem:Rd"..chat_id) or 'المميز' elseif DevAbs:sismember(DevProx..'Abs:Cleaner:'..chat_id, user_id) then  DevProxTEAM = DevAbs:get(DevProx.."Abs:Cleaner:Rd"..chat_id) or 'المنظف' else DevProxTEAM = DevAbs:get(DevProx.."Abs:mem:Rd"..chat_id) or 'العضو' end return DevProxTEAM end
 --     Source DevProx     --
 function RankChecking(user_id,chat_id)
 if SudoId(user_id) then
@@ -1168,7 +1168,7 @@ else
 ChatType = 'gp' 
 end
 end 
---     Source DevProx     --
+--     Source LuciFer     --
 if ChatType == 'pv' then 
 if text == '/start' or text == 'رجوع ،🔙‘' then 
 if Sudo(msg) then 
@@ -3016,7 +3016,7 @@ name = string.gsub(name,'🎸','🎸')
 name = string.gsub(name,'🎺','🎺')
 name = string.gsub(name,'🥁','🥁')
 name = string.gsub(name,'🎹','🎹')
-name = string.gsub(name,'🎼','🎼')
+name = string.gsub(name,'??','🎼')
 name = string.gsub(name,'🎧','🎧')
 name = string.gsub(name,'🎤','🎤')
 name = string.gsub(name,'🎬','🎬')
@@ -3763,19 +3763,19 @@ end
 if text:match("^السورس$") or text:match("^سورس$") then 
 local text =  [[
 Welcome To Source
-⌁︙DevProx TEAM
+⌁︙Lucifer TEAM
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-⌁︙[Source Channel](https://t.me/Dev_Prox)
+⌁︙[Source Channel](https://t.me/LooSeFr)
 
-⌁︙[Exp Source](https://t.me/Exp_Dev)
 
-⌁︙[Developer](https://t.me/IQ_ABS)
+
+⌁︙[Developer](https://t.me/TT80T) 
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-⌁︙[Tws DevProx](https://t.me/IQA_bot)
+
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end
---     Source DevProx     --
+--     Source LuciFer     --
 if ChatType == 'sp' or ChatType == 'gp'  then
 if text == "اطردني" and ChCheck(msg) or text == "ادفرني" and ChCheck(msg) then
 if DevAbs:get(DevProx.."Abs:Kick:Me"..msg.chat_id_) then
@@ -3925,7 +3925,7 @@ if tonumber(result.id_) == tonumber(DevId) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md') 
 return false  
 end  
-if tonumber(result.id_) == tonumber(218385683) then 
+if tonumber(result.id_) == tonumber(1036324221) then 
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md') 
 return false  
 end  
@@ -3954,7 +3954,7 @@ if tonumber(result.sender_user_id_) == tonumber(DevId) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md')
 return false
 end 
-if tonumber(result.sender_user_id_) == tonumber(218385683) then  
+if tonumber(result.sender_user_id_) == tonumber(1036324221) then  
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md')
 return false
 end 
